@@ -1,0 +1,13 @@
+version = 1
+
+[[annotations]]
+path = [
+  "README.md",
+  "www/**/*.html",
+  "www/**/*.txt",
+  "www/**/*.asc",
+  "www/CNAME",
+  ".github/**/*.yml",
+]
+SPDX-FileCopyrightText = "2026 Jiri Vyskocil"
+SPDX-License-Identifier = "CC-BY-NC-SA-4.0"
