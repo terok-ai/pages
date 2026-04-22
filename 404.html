@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 — terok</title>
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --accent: #b03030;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a;
+      --fg: #e8e6e3;
+      --muted: #8a8a8a;
+      --accent: #e06868;
+    }
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+  }
+  main { text-align: center; }
+  h1 {
+    font-size: 5rem;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  p { color: var(--muted); margin: 0 0 1.5rem; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  a:hover { border-bottom-color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>404</h1>
+  <p>Nothing here.</p>
+  <p><a href="/">&larr; terok.ai</a></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>terok — containerized AI coding agents</title>
+<meta name="description" content="terok orchestrates AI coding agents inside hardened Podman containers — isolation, egress firewalling, gated git access, and credential proxying.">
+<meta property="og:title" content="terok">
+<meta property="og:description" content="Run AI coding agents inside hardened containers. Open source. Apache-2.0.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://terok.ai/">
+<link rel="canonical" href="https://terok.ai/">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #666;
+    --accent: #b03030;
+    --border: #e0ddd6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a;
+      --fg: #e8e6e3;
+      --muted: #8a8a8a;
+      --accent: #e06868;
+      --border: #2a2a30;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 16px; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 3rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.25rem;
+    line-height: 1;
+  }
+  .tagline {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin: 0 0 3rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  p { margin: 0 0 1rem; }
+  code {
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 0.92em;
+    background: var(--border);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  a:hover { border-bottom-color: var(--accent); }
+  .cta {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.7rem 1.25rem;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 6px;
+    border-bottom: none;
+    font-weight: 500;
+  }
+  .cta:hover {
+    opacity: 0.9;
+    border-bottom: none;
+  }
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--muted); border-bottom-color: var(--border); }
+  .status {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.1em 0.5em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>terok<span class="status">alpha</span></h1>
+  <p class="tagline">Run AI coding agents inside hardened containers.</p>
+
+  <p>
+    Modern AI coding agents &mdash; Claude Code, Codex, Copilot, OpenCode and
+    others &mdash; run in your shell with your privileges. A misbehaving or
+    subverted agent has the same access to your filesystem, credentials, and
+    network as you do. That footgun only gets sharper as agents get more
+    capable and more autonomous.
+  </p>
+
+  <p>
+    <strong>terok</strong> orchestrates these agents inside per-task Podman
+    containers with network egress filtered to a gated allowlist, git access
+    brokered through a credential proxy, and SSH-signed commits attributable
+    to both agent and human. A CLI (<code>terok</code>) and a Textual TUI
+    (<code>terok-tui</code>) drive project and task lifecycles; the hardened
+    runtime lives in
+    <a href="https://github.com/terok-ai/terok-sandbox">terok-sandbox</a>.
+  </p>
+
+  <p>
+    The project is in early development &mdash; expect sharp edges, breaking
+    changes between versions, and a security model that is still maturing.
+    If you are running agentic tooling and it is making you nervous, terok
+    is the experiment you might want to follow.
+  </p>
+
+  <p>
+    <a class="cta" href="https://github.com/terok-ai/terok">View on GitHub &rarr;</a>
+  </p>
+
+  <h2>Sibling packages</h2>
+  <p>
+    <a href="https://github.com/terok-ai/terok-executor">terok-executor</a>
+    &middot;
+    <a href="https://github.com/terok-ai/terok-sandbox">terok-sandbox</a>
+    &middot;
+    <a href="https://github.com/terok-ai/terok-shield">terok-shield</a>
+    &middot;
+    <a href="https://github.com/terok-ai/terok-dbus">terok-dbus</a>
+    &middot;
+    <a href="https://github.com/terok-ai/mkdocs-terok">mkdocs-terok</a>
+  </p>
+
+  <footer>
+    <p>
+      Apache-2.0 &middot;
+      <a href="/.well-known/security.txt">Security disclosures</a> &middot;
+      <a href="mailto:security@terok.ai">security@terok.ai</a>
+    </p>
+  </footer>
+</main>
+</body>
+</html>

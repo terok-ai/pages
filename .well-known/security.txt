@@ -1,0 +1,13 @@
+# terok security contact — RFC 9116
+# Report vulnerabilities in terok or any sibling package
+# (terok-executor, terok-sandbox, terok-shield, terok-dbus)
+# to the address below. Reports sent in good faith will be
+# acknowledged within a few days.
+
+Contact: mailto:security@terok.ai
+Expires: 2030-04-20T00:00:00Z
+Preferred-Languages: en, cs
+Canonical: https://terok.ai/.well-known/security.txt
+Encryption: https://terok.ai/.well-known/pgp-key.asc
+Encryption: openpgp4fpr:B17281FB37E592100F0D717DC807EAD8285CF0D6
+
